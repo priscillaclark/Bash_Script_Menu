@@ -11,17 +11,18 @@ read -p "Enter an option: " OPTION
 case $OPTION in
 
  1)
-	echo function_create()
+	# function_create()
 	;;
 
  2)
-	echo function_search()
+	# function_search()
 	;;
 3)
-	echo function_help()
+	# function_help()
 	;;
   *)
 	echo "Error: you have not entered a correct option, press any key to return to the menu"
-	;;
+#function_back()	
+;;
 esac
 
