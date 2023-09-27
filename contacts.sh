@@ -6,23 +6,35 @@ Menu:
 2) Search
 3) Help "
 
-read -p "Enter an option: " OPTION
+read -n 1 -r -p "Enter an option: " OPTION
 
 case $OPTION in
 
  1)
 	# function_create()
-	;;
+exit 0	
+;;
 
  2)
 	# function_search()
+exit 0
 	;;
 3)
-	# function_help()
+	echo "
+On the main menu type [1] for creating a new person
+type [2] for searching a new person
+any other input is invalid"
+exit 0
+
 	;;
+
   *)
-	echo "Error: you have not entered a correct option, press any key to return to the menu"
-#function_back()	
+	echo "
+Error: incorrect option, please retry"
+
 ;;
 esac
 
+#function_create(){
+
+#}
