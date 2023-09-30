@@ -1,0 +1,9 @@
+make a function to catch in every input
+length
+special characters
+different languages char
+empty
+mail and phone data type
+spaces enters etc
+
+use strinputs stroutputs errors etc
