@@ -27,19 +27,17 @@ read -r -p "
 Enter contact name to search for: " GIVENCONTACT
 
 # check string is not empty 
-if [ -z $GIVENCONTACT ]; then
+if [[ -z "$GIVENCONTACT" ]]; then
 echo "
 Please give a contact name"
-break;
-fi
-
 #check contact file is not empty
-if [ ! -s  "contacts.txt" ]; then
+elif [[ ! -s  "contacts.txt" ]]; then
 # -s checks the size of a file is greater than 0, means it's not empty
 echo "
 The contact file is empty, please create a contact before searching"
-break;
-fi
+else
+echo "
+Lore ipsum"i
   
 #si existe contacto sali devolve contacto encontrado
 #no encontre contacto
@@ -49,6 +47,7 @@ fi
 #echo "the contact exists";
 #}
 
+fi
 }
 
 echo "
