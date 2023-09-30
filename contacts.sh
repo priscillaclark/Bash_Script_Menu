@@ -70,8 +70,8 @@ case $OPTION in
 	;;
  3)
 	echo "
-	On the main menu type [1] for creating a new person
-	type [2] for searching a new person
+	On the main menu type [1] for creating a new contact
+	type [2] for searching a new contact
 	any other input is invalid"
 
 	;;
