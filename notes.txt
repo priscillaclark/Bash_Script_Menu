@@ -5,5 +5,22 @@ different languages char
 empty
 mail and phone data type
 spaces enters etc
+avoid repeated contacts
+maybe delete contacts in the future?
 
 use strinputs stroutputs errors etc
+
+run a command to capture exit codes / statuses 
+
+# Run a command that may return different exit codes
+some_command
+
+# Capture the exit status
+exit_status=$?
+
+# Check different exit codes
+if [ $exit_status -eq 0 ]; then
+    echo "Command succeeded."
+else
+    echo "Command failed with exit code: $exit_status."
+fi

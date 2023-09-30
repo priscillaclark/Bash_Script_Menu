@@ -16,7 +16,7 @@ read -r -p  "Enter phone: " PHONE
 read -r -p  "Enter mail: " MAIL
 
 NEWCONTACT="$NAME $LASTNAME $PHONE $MAIL"
-echo $NEWCONTACT >> contact.txt
+echo "$NEWCONTACT" >> contact.txt
 echo "Successfully saved"
 
 }
