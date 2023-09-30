@@ -31,7 +31,7 @@ if [[ -z "$GIVENCONTACT" ]]; then
 echo "
 Please give a contact name"
 #check contact file is not empty
-elif [[ ! -s  "contacts.txt" ]]; then
+elif [[ ! -s contact.txt ]]; then
 # -s checks the size of a file is greater than 0, means it's not empty
 echo "
 The contact file is empty, please create a contact before searching"
