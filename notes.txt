@@ -24,3 +24,7 @@ if [ $exit_status -eq 0 ]; then
 else
     echo "Command failed with exit code: $exit_status."
 fi
+
+cambiar variables de global a local
+meter case en un loop en lo posible
+no usar echoes anidados en manu usar contrabarras

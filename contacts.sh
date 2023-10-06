@@ -50,15 +50,19 @@ Lore ipsum"i
 fi
 }
 
-echo "
-Menu:
-1) Create
-2) Search
-3) Help "
+while true; do
 
-read -n 1 -r -p "Enter an option: " OPTION
+# Display Menu
+echo "Menu Options:"
+echo "1) Create"
+echo "2) Search"
+echo "3) Help"
+echo "4) Exit"
 
-case $OPTION in
+# Ask the User the option input
+read -n 1 -r -p "Enter an option: " option
+
+case $option in
 
  1)
 	 function_create
@@ -74,11 +78,14 @@ case $OPTION in
 	any other input is invalid"
 
 	;;
+4)	echo "Exiting the script"
+	exit 0
+;;
 
  *)
 	echo "
 	Error: incorrect option, please retry"
 	;;
-
 esac
 
+done
