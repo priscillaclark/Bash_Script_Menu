@@ -1,91 +1,91 @@
-#!/bin/bash
+}#!/bin/bash
 
-function_create()
-{
-read -r -p "
-Enter name: " name
-# -p is anti /
+function_create() {
+	read -r -p "
+Enter name: " NAME
+	# -p is anti /
 
-# -n checks the string variable is not empty?
-# -z checks the string variable is empty
+	# -n checks the string variable is not empty?
+	# -z checks the string variable is empty
 
-read -r -p  "Enter last name: " lastname
+	read -r -p "Enter last name: " LASTNAME
 
-read -r -p  "Enter phone: " phone
+	read -r -p "Enter phone: " PHONE
 
-read -r -p  "Enter mail: " mail
+	read -r -p "Enter mail: " MAIL
 
-newcontact="$name $lastname $phone $mail"
-echo "$newcontact" >> contact.txt
-echo "Successfully saved"
+	NEWCONTACT="$NAME $LASTNAME $PHONE $MAIL"
+	echo "$NEWCONTACT" >>contact.txt
+	echo "Successfully saved"
 
 }
 
-function_search(){
+function_search() {
 
-read -r -p "
-Enter contact name to search for: " givencontact
+	read -r -p "
+Enter contact name to search for: " GIVENCONTACT
 
-# check string is not empty 
-if [[ -z "$givencontact" ]]; then
-echo "
+	# check string is not empty
+	if [[ -z "$GIVENCONTACT" ]]; then
+		echo "
 Please give a contact name"
-#check contact file is not empty
-elif [[ ! -s contact.txt ]]; then
-# -s checks the size of a file is greater than 0, means it's not empty
-echo "
+	#check contact file is not empty
+	elif [[ ! -s contact.txt ]]; then
+		# -s checks the size of a file is greater than 0, means it's not empty
+		echo "
 The contact file is empty, please create a contact before searching"
-else
-echo "
+	else
+		echo "
 Lore ipsum"i
-  
-#si existe contacto sali devolve contacto encontrado
-#no encontre contacto
-#while(!(found)||){
 
-#found=true;
-#echo "the contact exists";
-#}
+	#si existe contacto sali devolve contacto encontrado
+	#no encontre contacto
+	#while(!(found)||){
 
-fi
+	#found=true;
+	#echo "the contact exists";
+	#}
+
+	fi
 }
 
 while true; do
 
-# Display Menu
-echo "Menu Options:"
-echo "1) Create"
-echo "2) Search"
-echo "3) Help"
-echo "4) Exit"
+	# Display Menu
+	echo "Menu Options:"
+	echo "1) Create"
+	echo "2) Search"
+	echo "3) Help"
+	echo "4) Exit"
 
-# Ask the User the option input
-read -n 1 -r -p "Enter an option: " option
+	# Ask the User the option input
+	read -n 1 -r -p "Enter an option: " option
 
-case $option in
+	case $option in
 
- 1)
-	 function_create
-	;;
+	1)
+		function_create
+		;;
 
- 2)
-	 function_search
-	;;
- 3)
-	echo "
+	2)
+		function_search
+		;;
+	3)
+		echo "
 	On the main menu type [1] for creating a new contact
 	type [2] for searching a new contact
 	any other input is invalid"
 
-	;;
-4)	echo "Exiting the script"
-	exit 0
-;;
+		;;
+	4)
+		echo "Exiting the script"
+		exit 0
+		;;
 
- *)
-	echo "
+	*)
+		echo "
 	Error: incorrect option, please retry"
-	;;
-esac
+		;;
+	esac
 
 done
