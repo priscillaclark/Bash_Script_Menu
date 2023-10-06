@@ -3,20 +3,20 @@
 function_create()
 {
 read -r -p "
-Enter name: " NAME
+Enter name: " name
 # -p is anti /
 
 # -n checks the string variable is not empty?
 # -z checks the string variable is empty
 
-read -r -p  "Enter last name: " LASTNAME
+read -r -p  "Enter last name: " lastname
 
-read -r -p  "Enter phone: " PHONE
+read -r -p  "Enter phone: " phone
 
-read -r -p  "Enter mail: " MAIL
+read -r -p  "Enter mail: " mail
 
-NEWCONTACT="$NAME $LASTNAME $PHONE $MAIL"
-echo "$NEWCONTACT" >> contact.txt
+newcontact="$name $lastname $phone $mail"
+echo "$newcontact" >> contact.txt
 echo "Successfully saved"
 
 }
@@ -24,10 +24,10 @@ echo "Successfully saved"
 function_search(){
 
 read -r -p "
-Enter contact name to search for: " GIVENCONTACT
+Enter contact name to search for: " givencontact
 
 # check string is not empty 
-if [[ -z "$GIVENCONTACT" ]]; then
+if [[ -z "$givencontact" ]]; then
 echo "
 Please give a contact name"
 #check contact file is not empty

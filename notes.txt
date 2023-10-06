@@ -28,3 +28,8 @@ fi
 cambiar variables de global a local
 meter case en un loop en lo posible
 no usar echoes anidados en manu usar contrabarras
+
+arreglar cosas que quedan en la misma linea en case
+poner tal vez una opcion ver agenda cat 
+borrar contacto
+borrar agenda all
