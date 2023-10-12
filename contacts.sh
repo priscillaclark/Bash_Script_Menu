@@ -2,49 +2,55 @@
 
 function_create() {
 	read -r -p "
-Enter name: " NAME
+Enter name: " name
 	# -p is anti /
 
 	# -n checks the string variable is not empty?
 	# -z checks the string variable is empty
 
-	read -r -p "Enter last name: " LASTNAME
+	read -r -p "Enter last name: " lastname
 
-	read -r -p "Enter phone: " PHONE
+	read -r -p "Enter phone: " phone
 
-	read -r -p "Enter mail: " MAIL
+	read -r -p "Enter mail: " mail
 
-	NEWCONTACT="$NAME $LASTNAME $PHONE $MAIL"
-	echo "$NEWCONTACT" >>contact.txt
+	newcontact="$name $lastname $phone $mail"
+	echo "$newcontact" >>contact.txt
 	echo "Successfully saved"
 
 }
 
 function_search() {
 
-	read -r -p "
-Enter contact name to search for: " GIVENCONTACT
+contacts_file="contacts.txt"
 
-	# check string is not empty
-	if [[ -z "$GIVENCONTACT" ]]; then
+	read -r -p "
+Enter contact name to search for: " givencontact
+
+#fix this so that user can sear for kewwords not only name
+
+	# check string is empty
+	if [ -z "$givencontact" ]; then
 		echo "
 Please give a contact name"
 	#check contact file is not empty
-	elif [[ ! -s contact.txt ]]; then
+	elif [ ! -s contact.txt ]; then
 		# -s checks the size of a file is greater than 0, means it's not empty
 		echo "
 The contact file is empty, please create a contact before searching"
+
+#why cant i put the regular expression directly on the elif who knows
+found=$(grep -i "$givencontact" "$contacts_file")
+#-i to ignore case sensitivity
+	elif [ -n "$found" ]; then
+#-n check not empty
+		
+		echo "
+Contact found:"
+		echo "$found"
 	else
 		echo "
-Lore ipsum"i
-
-	#si existe contacto sali devolve contacto encontrado
-	#no encontre contacto
-	#while(!(found)||){
-
-	#found=true;
-	#echo "the contact exists";
-	#}
+Contact not found"
 
 	fi
 }
