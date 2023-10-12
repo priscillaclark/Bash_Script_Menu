@@ -1,15 +1,17 @@
-make a function to catch in every input
-length
+
+check inputs length
 special characters
 different languages char
 empty
 mail and phone data type
 spaces enters etc
 avoid repeated contacts
-maybe delete contacts in the future?
+search contacts not only by name but also by keywords
+
+optional maybe delete contacts in the future? or the whole agenda
+optional see whole agenda
 
 use strinputs stroutputs errors etc
-
 run a command to capture exit codes / statuses 
 
 # Run a command that may return different exit codes
@@ -26,8 +28,5 @@ else
 fi
 
 no usar echoes anidados en manu usar contrabarras
+arreglar echo del exit option 
 
-arreglar cosas que quedan en la misma linea en case
-poner tal vez una opcion ver agenda cat 
-borrar contacto
-borrar agenda all
