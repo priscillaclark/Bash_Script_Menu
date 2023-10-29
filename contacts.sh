@@ -22,12 +22,12 @@ Enter name: " name
 
 function_search() {
 
-contacts_file="contacts.txt"
+	contacts_file="contacts.txt"
 
 	read -r -p "
 Enter contact name to search for: " givencontact
 
-#fix this so that user can sear for kewwords not only name
+	#fix this so that user can sear for kewwords not only name
 
 	# check string is empty
 	if [ -z "$givencontact" ]; then
@@ -39,12 +39,12 @@ Please give a contact name"
 		echo "
 The contact file is empty, please create a contact before searching"
 
-#why cant i put the regular expression directly on the elif who knows
-found=$(grep -i "$givencontact" "$contacts_file")
-#-i to ignore case sensitivity
+		#why cant i put the regular expression directly on the elif who knows
+		found=$(grep -i "$givencontact" "$contacts_file")
+		#-i to ignore case sensitivity
 	elif [ -n "$found" ]; then
-#-n check not empty
-		
+		#-n check not empty
+
 		echo "
 Contact found:"
 		echo "$found"
