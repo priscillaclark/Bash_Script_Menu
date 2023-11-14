@@ -33,7 +33,7 @@ Enter contact name or keyword to search for: " givencontact
 Please provide a contact name or a keyword"
 
 		# -e check if file exists
-	elif [ ! -e "contacts_file" ]; then
+	elif [ ! -e "$contacts_file" ]; then
 		echo "
 The contact file does not exist, please create a contact before searching"
 
